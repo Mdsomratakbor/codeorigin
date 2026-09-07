@@ -1,3 +1,8 @@
+---
+name: ai-attribution
+description: Identify and record AI contributions to a change, distinguishing observed from reported or inferred, bound to evidence and confidence. Use when attributing generated or AI-assisted code to an agent, or deciding whether an AI claim is supported.
+---
+
 # Skill: AI Attribution
 
 **Version:** 1.0.0

@@ -1,3 +1,8 @@
+---
+name: contribution-traceability
+description: Provide end-to-end traceability linking contributor to action to artifact to change to evidence to verification. Use to follow any contribution from claim to supporting proof, or to produce a gap report.
+---
+
 # Skill: Contribution Traceability
 
 **Version:** 1.0.0

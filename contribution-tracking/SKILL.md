@@ -1,3 +1,8 @@
+---
+name: contribution-tracking
+description: Record contributions to code as structured, evidence-backed records (who did what, to which artifact, when, on what basis). Use when logging an act of generation, modification, review, approval, or prompting during AI-assisted or human development.
+---
+
 # Skill: Contribution Tracking
 
 **Version:** 1.0.0

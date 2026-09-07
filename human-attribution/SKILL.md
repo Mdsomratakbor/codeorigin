@@ -1,3 +1,8 @@
+---
+name: human-attribution
+description: Record human participation in a change, including non-code contributions like direction, prompting, review, and approval, as evidence-backed attributions. Use when attributing work to a person or capturing human oversight of AI output.
+---
+
 # Skill: Human Attribution
 
 **Version:** 1.0.0

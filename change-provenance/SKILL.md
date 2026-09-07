@@ -1,3 +1,8 @@
+---
+name: change-provenance
+description: Record the lineage of a contribution as it evolves through generation, modification, review, rejection, regeneration, approval, and merge. Use to preserve how a change came to be, not just its final state.
+---
+
 # Skill: Change Provenance
 
 **Version:** 1.0.0

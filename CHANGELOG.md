@@ -18,7 +18,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - Adapters: kiro, codex, claude-code, opencode, cursor, copilot, spec-kit, openspec.
 - Examples: single-agent, multi-agent, multi-language.
 
+- Standard Agent Skills frontmatter (`name` + `description`) on every `SKILL.md`, making the pack
+  installable and auto-discoverable by Kiro, Claude Code, GitHub Copilot, and other agents.
+- README Install and Usage sections with per-agent install paths and a worked run sequence.
+
 ### Notes
 
-- The entire system is packaged as a single self-contained bundle folder (`codeorigin/`) so it can be
-  copied into any project as one unit, or a single `<skill>/SKILL.md` can be copied for one skill.
+- The entire system can be copied into any project as one unit, or a single `<skill>/SKILL.md` can be
+  copied for one skill.

@@ -1,3 +1,8 @@
+---
+name: contribution-verification
+description: Independently assess whether a contribution claim is supported by evidence and assign a verification status, never trusting a self-claim. Use to verify AI or human attribution before relying on it.
+---
+
 # Skill: Contribution Verification
 
 **Version:** 1.0.0

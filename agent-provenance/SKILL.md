@@ -1,3 +1,8 @@
+---
+name: agent-provenance
+description: Record which AI agent participated in a contribution using a generic, agent-neutral identity model that captures only known facts. Use when identifying the agent (Kiro, Codex, Claude Code, OpenCode, Cursor, Copilot, custom, or unknown) behind a change.
+---
+
 # Skill: Agent Provenance
 
 **Version:** 1.0.0

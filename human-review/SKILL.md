@@ -1,3 +1,8 @@
+---
+name: human-review
+description: Track human review, approval, rejection, and validation activity as evidence-backed contributions. Use to capture the human oversight dimension of AI-assisted development.
+---
+
 # Skill: Human Review
 
 **Version:** 1.0.0

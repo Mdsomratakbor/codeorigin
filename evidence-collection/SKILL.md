@@ -1,3 +1,8 @@
+---
+name: evidence-collection
+description: Collect and classify the evidence (commits, diffs, PRs, sessions, statements) supporting or contradicting a contribution claim, as inspectable Evidence Records. Use before attributing or verifying any contribution.
+---
+
 # Skill: Evidence Collection
 
 **Version:** 1.0.0

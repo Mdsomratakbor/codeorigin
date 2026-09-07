@@ -1,3 +1,8 @@
+---
+name: contribution-reporting
+description: Assemble contribution, attribution, provenance, evidence, and accounting data into clear, honest reports that preserve confidence, verification status, and the evidence-versus-inference distinction. Use to summarize provenance for a change, contributor, or period.
+---
+
 # Skill: Contribution Reporting
 
 **Version:** 1.0.0

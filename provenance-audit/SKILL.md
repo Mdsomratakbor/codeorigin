@@ -1,3 +1,8 @@
+---
+name: provenance-audit
+description: Examine provenance records for integrity problems: tampering, fabrication, missing evidence, contradictions, and unauthorized attribution changes. Use to audit whether recorded provenance is consistent and honestly supported.
+---
+
 # Skill: Provenance Audit
 
 **Version:** 1.0.0

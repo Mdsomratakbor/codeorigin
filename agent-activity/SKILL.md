@@ -1,3 +1,8 @@
+---
+name: agent-activity
+description: Capture the stream of agent, human, and tool events (sessions, prompts, generations, edits, commits, approvals) into ordered, provenance-classified records, supporting partial streams. Use to log raw development activity from a session.
+---
+
 # Skill: Agent Activity
 
 **Version:** 1.0.0

@@ -203,6 +203,59 @@ UNKNOWN
 
 ---
 
+## Install
+
+CodeOrigin follows the open [Agent Skills](https://agentskills.io) convention: each skill is a folder containing a `SKILL.md` that starts with YAML frontmatter (`name` + `description`). Agents preload each skill's name and description and load the full body when it becomes relevant. Install by copying skills into the location your agent scans.
+
+### Whole pack
+
+```bash
+# clone alongside your project
+git clone https://github.com/Mdsomratakbor/codeorigin-.git
+
+# Kiro
+mkdir -p your-project/.kiro/skills
+cp -r codeorigin-/* your-project/.kiro/skills/codeorigin/
+
+# Claude Code
+mkdir -p your-project/.claude/skills
+cp -r codeorigin-/* your-project/.claude/skills/codeorigin/
+
+# GitHub Copilot (repo-scoped skills folder)
+mkdir -p your-project/.github/skills
+cp -r codeorigin-/* your-project/.github/skills/codeorigin/
+```
+
+### One skill only
+
+Because each skill is self-contained, you can copy just one:
+
+```bash
+cp -r codeorigin-/ai-attribution your-project/.kiro/skills/ai-attribution
+```
+
+The schemas and protocols it references are included in the same repo; copy `schemas/` and `protocols/` too if you want the skill's links to resolve locally.
+
+### As a git submodule (to track upstream updates)
+
+```bash
+git submodule add https://github.com/Mdsomratakbor/codeorigin-.git .codeorigin
+```
+
+## Usage
+
+Once installed, an agent (Kiro, Claude Code, Copilot, OpenCode) discovers each skill by its `description` and loads it when your task matches — for example, "record who wrote this change" activates `contribution-tracking`. You can also invoke a skill directly by name where your agent supports it.
+
+A typical run for one change:
+
+1. **Collect evidence** (`evidence-collection`) — the spec, the agent session, the commit.
+2. **Attribute** (`ai-attribution` / `human-attribution`) — who did what, at what confidence.
+3. **Record the contribution and its lineage** (`contribution-tracking`, `change-provenance`).
+4. **Verify** (`contribution-verification`) — corroborate reported claims against observed evidence.
+5. **Report** (`contribution-reporting`) — a human-readable summary that preserves confidence and verification.
+
+Provenance records are Markdown and can live wherever you like — a `.provenance/` folder, Git notes, or a sidecar file. See [`examples/`](examples/) for a full worked run; the [Spec Kit](adapters/spec-kit.md), [OpenCode](adapters/opencode.md), and [Kiro](adapters/kiro.md) adapters describe how those tools feed evidence in.
+
 ## Getting Started
 
 1. Read the [schemas](schemas/) to understand the canonical model.

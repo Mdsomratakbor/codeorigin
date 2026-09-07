@@ -1,3 +1,8 @@
+---
+name: ai-human-accounting
+description: Produce quantitative AI vs human contribution metrics while documenting method, source, assumptions, limitations, and confidence, and never conflating a count with intellectual contribution. Use to report contribution shares honestly.
+---
+
 # Skill: AI/Human Accounting
 
 **Version:** 1.0.0

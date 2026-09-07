@@ -1,0 +1,14 @@
+# Normalize line endings so contributors on any OS get consistent, clean diffs.
+# Text files are stored with LF in the repository and checked out natively.
+* text=auto eol=lf
+
+# Explicit: Markdown and the docs that make up this skill collection use LF.
+*.md   text eol=lf
+LICENSE text eol=lf
+
+# Treat common binaries as binary (in case examples ever include them).
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary

@@ -4,6 +4,10 @@
 
 CodeOrigin is a stable **AI/Human contribution, provenance, attribution, evidence, and traceability skill layer**. It is designed to be dropped into virtually any software development workflow.
 
+> Track who — and what — really wrote your code.
+
+**Topics:** `provenance` · `attribution` · `contribution-tracking` · `ai-attribution` · `traceability` · `evidence` · `markdown` · `skills` · `agent-agnostic` · `ai-assisted-development`
+
 ---
 
 ## Core Principle
@@ -89,12 +93,12 @@ CodeOrigin only tracks the **provenance and contribution dimension** of developm
 
 ---
 
-## Bundle Layout
+## Repository Layout
 
-CodeOrigin ships as a single self-contained bundle. Copy the whole `codeorigin/` folder into any project's skills directory to adopt the entire system as one unit; or copy an individual `<skill>/SKILL.md` for just one skill.
+This repository *is* CodeOrigin. Copy the whole repository into any project's skills directory to adopt the entire system as one unit, or copy an individual `<skill>/SKILL.md` for just one skill.
 
 ```text
-codeorigin/
+.
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md
@@ -209,7 +213,7 @@ UNKNOWN
 
 ## Portability
 
-Each skill lives in its own `<skill>/SKILL.md` folder and is self-contained. To adopt everything, copy the whole `codeorigin/` bundle. To adopt one skill, copy that single `SKILL.md`. Skills reference the schemas and protocols by name, but degrade gracefully when used standalone.
+Each skill lives in its own `<skill>/SKILL.md` folder and is self-contained. To adopt everything, copy the whole repository. To adopt one skill, copy that single `SKILL.md`. Skills reference the schemas and protocols by name, but degrade gracefully when used standalone.
 
 ## License
 

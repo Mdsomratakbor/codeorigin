@@ -8,6 +8,14 @@ CodeOrigin is a stable **AI/Human contribution, provenance, attribution, evidenc
 
 **Topics:** `provenance` · `attribution` · `contribution-tracking` · `ai-attribution` · `traceability` · `evidence` · `markdown` · `skills` · `agent-agnostic` · `ai-assisted-development`
 
+### Positioning: the verification & audit layer
+
+Most AI-provenance tools *assert* who wrote code — "this is AI," "this is human," "this is 70% AI." CodeOrigin's distinctive job is different: it is the **evidence, verification, and audit layer** that sits on top of those assertions.
+
+CodeOrigin never treats a claim as fact. Every attribution carries an explicit evidence class (`OBSERVED` / `REPORTED` / `INFERRED`), a confidence tied to that evidence, and an independent verification status (`VERIFIED` / `PARTIALLY_VERIFIED` / `UNVERIFIED` / `CONTRADICTED` / `UNKNOWN`). An agent claiming it wrote something is `REPORTED`, not proof; a post-hoc detector guess is `INFERRED`, never `VERIFIED` on its own; and unknown stays `UNKNOWN`.
+
+This makes CodeOrigin complementary to — not a competitor of — attribution formats like [Agent Trace](https://agent-trace.com/) and [ai-attestation](https://github.com/Korext/ai-attestation). Those capture the raw claim at interaction time; CodeOrigin **classifies, corroborates, verifies, and audits** it. See [Related Work & Interop](#related-work--interop).
+
 ---
 
 ## Core Principle
@@ -49,8 +57,31 @@ The following are **stable**:
 - NOT a coding agent.
 - NOT a project management system.
 - NOT a replacement for Spec Kit, OpenSpec, Kiro, Codex, Claude Code, OpenCode, Cursor, Copilot, or any other tool.
+- NOT a competing attribution format to Agent Trace or ai-attestation — it consumes them.
 
 CodeOrigin only tracks the **provenance and contribution dimension** of development. It consumes evidence produced by external systems; it does not duplicate their functionality.
+
+---
+
+## Related Work & Interop
+
+The AI-code-provenance space is active, and the problem is real: surveys in 2026 report that AI generates or assists a majority of enterprise code, while most teams lack the attribution to govern it, and regulation (e.g., the EU AI Act) increasingly expects an auditable trail. Several projects address parts of this problem. CodeOrigin is designed to **work with them, not against them.**
+
+| Project | What it does | CodeOrigin's relationship |
+|---|---|---|
+| [Agent Trace](https://agent-trace.com/) | Open, vendor-neutral format for AI/human authorship (human / ai / mixed / unknown) recorded in VCS | **Consumed as evidence** via [`adapters/agent-trace.md`](adapters/agent-trace.md) |
+| [ai-attestation](https://github.com/Korext/ai-attestation) | Open (CC0) standard + detection for AI-generated code; Git trailers | **Consumed as evidence** via [`adapters/ai-attestation.md`](adapters/ai-attestation.md) |
+| Detector / "AI-vs-human" scanners | Estimate origin from committed code | Their output is `INFERRED` evidence — recorded, never treated as `VERIFIED` |
+| Viewers / dashboards (e.g. commercial provenance tools) | Render provenance for stakeholders | Complementary: they can render CodeOrigin's Markdown records |
+
+**Where CodeOrigin is distinctive:**
+
+1. **Evidence discipline** — an explicit `OBSERVED` / `REPORTED` / `INFERRED` boundary on every claim, so a declared attestation and a detector guess are never conflated.
+2. **Independent verification** — a first-class `VERIFIED` / `PARTIALLY_VERIFIED` / `UNVERIFIED` / `CONTRADICTED` / `UNKNOWN` status that never rests on a self-claim.
+3. **Multi-agent lineage** — the full handoff chain (e.g., Kiro → Codex → Claude Code → Human), including retained rejections, not just a single AI-vs-human label.
+4. **Audit** — a dedicated Provenance Audit skill that flags fabricated, unsupported, or contradicted claims.
+
+If you already emit Agent Trace or ai-attestation, keep doing so. Point CodeOrigin at them to add the verification and audit layer on top.
 
 ---
 
@@ -141,7 +172,9 @@ This repository *is* CodeOrigin. Copy the whole repository into any project's sk
 │   ├── cursor.md
 │   ├── copilot.md
 │   ├── spec-kit.md
-│   └── openspec.md
+│   ├── openspec.md
+│   ├── agent-trace.md      # interop: consume Agent Trace records
+│   └── ai-attestation.md   # interop: consume ai-attestation trailers
 │
 └── examples/               # Same model demonstrated across environments
     ├── single-agent/

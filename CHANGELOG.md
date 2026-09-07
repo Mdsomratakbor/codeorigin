@@ -21,6 +21,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - Standard Agent Skills frontmatter (`name` + `description`) on every `SKILL.md`, making the pack
   installable and auto-discoverable by Kiro, Claude Code, GitHub Copilot, and other agents.
 - README Install and Usage sections with per-agent install paths and a worked run sequence.
+- Interop adapters: `adapters/agent-trace.md` and `adapters/ai-attestation.md`, which consume existing
+  attribution formats (Agent Trace, ai-attestation) as evidence rather than competing with them.
+- README repositioning: CodeOrigin framed as the evidence/verification/audit layer, with a
+  "Related Work & Interop" section distinguishing it from attribution formats and detectors.
 
 ### Notes
 

@@ -14,6 +14,8 @@ Most signals a coding agent emits about its own behavior are **REPORTED** (the a
 
 ## Available Adapters
 
+**Coding agents** — how a tool's sessions/edits become evidence:
+
 | Adapter | Ecosystem | Typical role |
 |---|---|---|
 | [`kiro.md`](kiro.md) | Kiro IDE | Coding agent, session + hook events |
@@ -22,8 +24,22 @@ Most signals a coding agent emits about its own behavior are **REPORTED** (the a
 | [`opencode.md`](opencode.md) | OpenCode | Coding agent |
 | [`cursor.md`](cursor.md) | Cursor | AI-assisted IDE |
 | [`copilot.md`](copilot.md) | GitHub Copilot | AI code assistant |
+
+**SDD frameworks** — how specification metadata becomes evidence:
+
+| Adapter | Ecosystem | Typical role |
+|---|---|---|
 | [`spec-kit.md`](spec-kit.md) | Spec Kit | SDD framework (metadata as evidence) |
 | [`openspec.md`](openspec.md) | OpenSpec | SDD framework (metadata as evidence) |
+
+**Interop / existing attribution formats** — how another provenance format becomes evidence that CodeOrigin verifies and audits:
+
+| Adapter | Format | Typical role |
+|---|---|---|
+| [`agent-trace.md`](agent-trace.md) | [Agent Trace](https://agent-trace.com/) | Open AI/human authorship format → consumed as evidence |
+| [`ai-attestation.md`](ai-attestation.md) | [ai-attestation](https://github.com/Korext/ai-attestation) | AI-generated-code attestations / trailers → consumed as evidence |
+
+CodeOrigin positions itself **on top of** the interop formats: they capture the raw claim, CodeOrigin classifies (reported vs inferred), corroborates, verifies, and audits it.
 
 ## Adding an Adapter
 

@@ -211,19 +211,19 @@ CodeOrigin follows the open [Agent Skills](https://agentskills.io) convention: e
 
 ```bash
 # clone alongside your project
-git clone https://github.com/Mdsomratakbor/codeorigin-.git
+git clone https://github.com/Mdsomratakbor/codeorigin.git
 
 # Kiro
 mkdir -p your-project/.kiro/skills
-cp -r codeorigin-/* your-project/.kiro/skills/codeorigin/
+cp -r codeorigin/* your-project/.kiro/skills/codeorigin/
 
 # Claude Code
 mkdir -p your-project/.claude/skills
-cp -r codeorigin-/* your-project/.claude/skills/codeorigin/
+cp -r codeorigin/* your-project/.claude/skills/codeorigin/
 
 # GitHub Copilot (repo-scoped skills folder)
 mkdir -p your-project/.github/skills
-cp -r codeorigin-/* your-project/.github/skills/codeorigin/
+cp -r codeorigin/* your-project/.github/skills/codeorigin/
 ```
 
 ### One skill only
@@ -231,7 +231,7 @@ cp -r codeorigin-/* your-project/.github/skills/codeorigin/
 Because each skill is self-contained, you can copy just one:
 
 ```bash
-cp -r codeorigin-/ai-attribution your-project/.kiro/skills/ai-attribution
+cp -r codeorigin/ai-attribution your-project/.kiro/skills/ai-attribution
 ```
 
 The schemas and protocols it references are included in the same repo; copy `schemas/` and `protocols/` too if you want the skill's links to resolve locally.
@@ -239,7 +239,7 @@ The schemas and protocols it references are included in the same repo; copy `sch
 ### As a git submodule (to track upstream updates)
 
 ```bash
-git submodule add https://github.com/Mdsomratakbor/codeorigin-.git .codeorigin
+git submodule add https://github.com/Mdsomratakbor/codeorigin.git .codeorigin
 ```
 
 ## Usage
